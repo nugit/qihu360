@@ -26,10 +26,6 @@ describe Qihu::Auth do
       subject.redirect_uri = "http://icyleaf.com"
       expect(subject.redirect_uri).to eq("http://icyleaf.com")
     end
-
-    it "是否关闭了 ssl 的验证" do
-      expect(subject.oauth2.connection.ssl).to eq({:verify => false})
-    end
   end
 
   describe "#验证" do

@@ -12,8 +12,7 @@ module Qihu
       @oauth2 = OAuth2::Client.new(client_id, client_secret,
         :site => site,
         :authorize_url => '/oauth2/authorize',
-        :token_url => '/oauth2/access_token',
-        :ssl => {:verify => false},
+        :token_url => '/oauth2/access_token'
       )
 
       if token or !token.empty?
